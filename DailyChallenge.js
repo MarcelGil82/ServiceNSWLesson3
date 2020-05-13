@@ -16,10 +16,17 @@ function searchByCharacter(array, searchTerm) {
         let element = array[i];
 
     let found = false;
-for(let i = 0; i < element.name.length; i++) 
+for(let i = 0; i < element.name.length; i++) {
 let letter = element.name[i];
-if(letter == searchTerm){
+if(letter == searchTerm) {
 found = true;    
 }
 }
+if (found) {
+    resultArray.push(element);
 }
+}
+return resultArray;
+}
+console.log(searchByCharacter)
+console.log(searchByCharacter(people, "a"))
